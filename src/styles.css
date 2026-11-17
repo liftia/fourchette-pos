@@ -1,0 +1,91 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/bricolage-grotesque";
+@import "@fontsource-variable/atkinson-hyperlegible-next";
+@import "@fontsource-variable/atkinson-hyperlegible-mono";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --font-heading: 'Bricolage Grotesque Variable', 'Arial Narrow', sans-serif;
+    --font-sans: 'Atkinson Hyperlegible Next Variable', Verdana, sans-serif;
+    --font-mono: 'Atkinson Hyperlegible Mono Variable', Menlo, monospace;
+    --color-ring: var(--ring);
+    --color-input: var(--input);
+    --color-border: var(--border);
+    --color-destructive: var(--destructive);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-accent: var(--accent);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-muted: var(--muted);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-secondary: var(--secondary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary: var(--primary);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-popover: var(--popover);
+    --color-card-foreground: var(--card-foreground);
+    --color-card: var(--card);
+    --color-foreground: var(--foreground);
+    --color-background: var(--background);
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+    --radius-2xl: calc(var(--radius) * 1.8);
+    --radius-3xl: calc(var(--radius) * 2.2);
+    --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+    --background: #ECEEE6;
+    --foreground: #131A2A;
+    --card: #FFFFFF;
+    --card-foreground: #131A2A;
+    --popover: #FFFFFF;
+    --popover-foreground: #131A2A;
+    --primary: #131A2A;
+    --primary-foreground: #FFFFFF;
+    --secondary: #ECEEE6;
+    --secondary-foreground: #131A2A;
+    --muted: #ECEEE6;
+    --muted-foreground: #454E5E;
+    --accent: #F2B21B;
+    --accent-foreground: #131A2A;
+    --destructive: #B8121B;
+    --border: #131A2A;
+    --input: #131A2A;
+    --ring: #131A2A;
+    --radius: 0.25rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    }
+  body {
+    @apply bg-background text-foreground;
+    }
+  html {
+    @apply font-sans;
+    }
+}
+
+@layer components {
+  .slip {
+    position: relative;
+  }
+  .slip::after {
+    content: "";
+    position: absolute;
+    left: -2px;
+    right: -2px;
+    bottom: -1px;
+    height: 10px;
+    background: radial-gradient(circle at 10px 10px, var(--background) 7px, transparent 7.6px) 0 0 / 20px 10px repeat-x;
+  }
+  .hatched {
+    background-image: repeating-linear-gradient(135deg, transparent 0 10px, #E3E6DC 10px 12px);
+  }
+}
