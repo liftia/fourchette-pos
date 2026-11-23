@@ -6,7 +6,7 @@ React, Vite, TypeScript, shadcn/ui.
 
 ## Installer
 
-Forkez ce dépôt, clonez votre fork à côté de `fourchette-api` et de `fourchette-kitchen`, dans un même dossier `fourchette/`, avec le dépôt de départ en `upstream`. Le pas à pas, et la vérification du poste (`npm run preflight`), sont dans le README de `fourchette-api`.
+Forkez ce dépôt, clonez votre fork à côté de `fourchette-api` et de `fourchette-kitchen`, dans un même dossier `fourchette/`. Le pré-vol ajoute le dépôt de départ en `upstream`. Le pas à pas, et la vérification du poste (`npm run preflight`), sont dans le README de `fourchette-api`.
 
 ## Lancer
 
